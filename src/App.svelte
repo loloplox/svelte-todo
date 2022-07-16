@@ -1,6 +1,8 @@
 <script>
     import Card from "./lib/Card.svelte";
 
+    document.title = "Todo Svelte"
+
     let todos = []
     let todo = {id: '', name: '', state: false}
 
@@ -55,7 +57,7 @@
     <div class="container">
         <h1 class="display-5 text-center mb-5">CRUD</h1>
         <div class="row">
-            <div class="col-5 p-4">
+            <div class="col-sm-12 col-md-5 p-4">
                 <form on:submit|preventDefault={addTodo} class="d-grid gap-3">
                     <div class="">
                         <label for="Name" class="form-label">Name:</label>
@@ -68,7 +70,7 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
-            <div class="col-7 d-grid gap-2">
+            <div class="col-sm-12 col-md-7 d-grid gap-2">
                 {#each todos as item}
                     <Card
                         id={item.id}
