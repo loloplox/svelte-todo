@@ -10,7 +10,6 @@
         let newTodos
 
         if (!todo.name.trim()) {
-            console.log('texto vacio')
             return
         }
 
